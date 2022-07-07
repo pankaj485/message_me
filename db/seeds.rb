@@ -11,3 +11,8 @@ User.create(username: "suser2", password: "pass1")
 User.create(username: "suser3", password: "pass1")
 User.create(username: "suser4", password: "pass1")
 User.create(username: "suser5", password: "pass1")
+
+Message.create(body: "I'm good how are you? ", user_id: User.find_by_id(1).id)
+Message.create(body: "M also good :)", user_id: User.find_by_id(2).id)
+Message.create(body: "okay then, see you.", user_id: User.find_by_id(1).id)
+Message.create(body: "see ya mate!", user_id: User.find_by_id(2).id)
