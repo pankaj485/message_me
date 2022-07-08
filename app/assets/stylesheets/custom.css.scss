@@ -4,6 +4,8 @@
   height: 450px;
 }
 
-.b5 {
-  border: 5px dotted red;
+
+#messages {
+  height: 15em;
+  overflow: auto;
 }

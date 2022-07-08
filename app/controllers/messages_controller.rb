@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
     # create a new message based on private method, save it, redirect to root path
     message = current_user.messages.build(message_params)
     if message.save
-      redirect_to root_path
+      ActionCable.server.broadcast 'chatroom_channel', message: message_render(message)
     end
   end
 
@@ -15,4 +15,12 @@ class MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:body)
   end
+
+  def message_render(message)
+    # rendering partial from controller
+    # here we are rendering views/messages/_message.html.erb partial
+    # as the partial also requires message object, passing it using locals method.
+    render(partial: 'message', locals: { message: message })
+  end
+
 end
