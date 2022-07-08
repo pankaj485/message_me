@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Before installation, make sure you have ruby 2.6.8 installed. visit [here](https://rvm.io/) for installation.
 
-Things you may want to cover:
+## Steps to run app locally,
 
-* Ruby version
+1. clone the repo
 
-* System dependencies
+- execute following commands in order
+  1. `bundle install` to install required packages
+  2. `rails db:migrate` to generate database tables
+  3. `rails db:seed` to generate starter data
+  4. `rails s` to start local development server
 
-* Configuration
+Upon setting up correctly, you can start your local server at [http://localhost:3000/](http://localhost:3000/)
 
-* Database creation
+You will have access to 2 users following details which you can use to login locally.
 
-* Database initialization
+| username | password |
+| -------- | -------- |
+| user1    | pass1    |
+| user2    | pass2    |
 
-* How to run the test suite
+You can now start real-time messaging with Rails and socket.
 
-* Services (job queues, cache servers, search engines, etc.)
+After logging in succesfully, you will be presented with chat screen with couple of template message from above users.
 
-* Deployment instructions
-
-* ...
+PS: The App doesn't have much feature to offer as the project is focused on socket. Few navbar links and Sidebar links may not work :D
