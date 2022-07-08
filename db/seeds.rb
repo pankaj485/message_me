@@ -6,10 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# User.create(username: "pank", password: "hello")
-# User.create(username: "user1", password: "pass1")
-# User.create(username: "user2", password: "pass1")
-#
-Message.create(body: "I'm good how are you? ", user_id: User.find_by_id(1).id)
-Message.create(body: "M also good :)", user_id: User.find_by_id(2).id)
-Message.create(body: "okay then, see you.", user_id: User.find_by_id(1).id)
+User.create(username: "user1", password: "pass1")
+User.create(username: "user2", password: "pass2")
+
+Message.create(body: "Welcome", user_id: User.find_by_id(1).id)
+Message.create(body: "You can start chatting now :)", user_id: User.find_by_id(2).id)
